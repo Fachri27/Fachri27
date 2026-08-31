@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#0ea5a4"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="10"/></filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="320" fill="url(#bg)" />
+
+  <!-- Animated blobs -->
+  <g filter="url(#blur)" opacity="0.85">
+    <circle cx="200" cy="160" r="120" fill="url(#g1)">
+      <animate attributeName="cx" dur="12s" values="100;300;120;100" repeatCount="indefinite"/>
+      <animate attributeName="cy" dur="10s" values="120;180;130;120" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="120" r="90" fill="#06b6d4">
+      <animate attributeName="cx" dur="10s" values="600;760;720;600" repeatCount="indefinite"/>
+      <animate attributeName="cy" dur="14s" values="100;140;110;100" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1050" cy="190" r="110" fill="#7c3aed">
+      <animate attributeName="cx" dur="14s" values="980;1120;1060;980" repeatCount="indefinite"/>
+      <animate attributeName="cy" dur="12s" values="170;210;180;170" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Foreground content -->
+  <g transform="translate(60,40)">
+    <text x="0" y="60" font-family="Inter, Arial, sans-serif" font-size="48" fill="#fff" font-weight="700">Hi, saya <tspan fill="#ffd166">Fachri</tspan> 👋</text>
+    <text x="0" y="110" font-family="Inter, Arial, sans-serif" font-size="22" fill="#e6e6e6">Full‑stack developer · Open source · Automation</text>
+
+    <!-- small animated underline -->
+    <rect x="0" y="118" width="0" height="4" fill="#ffd166">
+      <animate attributeName="width" dur="2s" values="0;220;0" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- subtle floating icon (emoji) -->
+    <text x="360" y="70" font-size="36">✨</text>
+    <text x="420" y="70" font-size="36">🚀</text>
+    <text x="480" y="70" font-size="36">💡</text>
+    <g>
+      <animateTransform attributeName="transform" type="translate" dur="8s" values="0 0; 0 6; 0 0" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- wave at bottom -->
+  <g transform="translate(0,240)" fill="#0f172a" opacity="0.12">
+    <path d="M0 40 C 200 10, 400 90, 640 40 C 880 -10, 1080 70, 1280 40 L1280 80 L0 80 Z">
+      <animate attributeName="d" dur="8s" repeatCount="indefinite" values="M0 40 C 200 10, 400 90, 640 40 C 880 -10, 1080 70, 1280 40 L1280 80 L0 80 Z; M0 40 C 200 70, 400 10, 640 50 C 880 90, 1080 10, 1280 60 L1280 80 L0 80 Z; M0 40 C 200 10, 400 90, 640 40 C 880 -10, 1080 70, 1280 40 L1280 80 L0 80 Z"/>
+    </path>
+  </g>
+
+</svg>
